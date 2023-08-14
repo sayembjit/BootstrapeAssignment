@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAVA Conference</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .header {
+      background-color: #5f9c7f; /* Event's primary color */
+      color: #fff;
+      text-align: center;
+    }
+    .event-logo {
+      max-width: 200px;
+    }
+    
+    .form-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    .form-container label {
+      font-weight: bold;
+    }
+    .form-container select {
+      width: 100%;
+    }
+    .btn-register {
+      background-color: #00ff59;
+      border-color: #8000ff;
+    }
+    .btn-register:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="download.png" alt="Event Logo" class="img-fluid img-sm">
+    <h1>System.out.println("Welcome nerds!");</h1>
+    <p>Java developers gathering for a day.</p>
+  </header>
+
+  <div class="container">
+    <div class="table-responsive">
+     <table class="table table-dark table-hover">
+       <thead>
+         <tr>
+           <th>Session Name</th>
+           <th>Speaker</th>
+           <th>Date</th>
+           <th>Time</th>
+           <th>Duration</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+          <td><a href="#" data-toggle="modal" data-target="#sessionModal1">Session 1</a></td>
+           <td>Jamse Gosling</td>
+           <td>August 15</td>
+           <td>10:00 AM</td>
+           <td>1 hour</td>
+         </tr>
+         <tr>
+          <td><a href="#" data-toggle="modal" data-target="#sessionModal2">Session 2</a></td>
+          <td>Bill Gates</td>
+          <td>August 15</td>
+          <td>11:30 AM</td>
+          <td>1 hour</td>
+        </tr>
+       </tbody>
+     </table>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="form-container">
+      <h2 class="mb-4">Register now to attend the conferenace!!!</h2>
+      <form id = "registration-form" >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="organization">Organization</label>
+          <input type="text" class="form-control" id="organization">
+        </div>
+        <div class="form-group">
+          <label for="session">Preferred Session</label>
+          <select class="form-control" id="session">
+            <option value="session1">Session 1</option>
+            <option value="session1">Session 2</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-register">Register</button>
+        <div class="alert alert-success mt-3 d-none" id="successMessage">
+          Registration successful! We look forward to seeing you at the conference.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Registration Successful</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Egarly waiting to see you in the conference.
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="sessionModal1" tabindex="-1" role="dialog" aria-labelledby="sessionModal1Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sessionModal1Label">Session 1 Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6>Session Name: Session 1</h6>
+        <p>Speaker: Jamse Gosling</p>
+        <p>Date: 15.08.23</p>
+        <p>Time: 10 AM</p>
+        <p>Will speak about mulltithreading</p>
+        <p>Founder of JAVA.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="sessionModal2" tabindex="-1" role="dialog" aria-labelledby="sessionModalLabe2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sessionModal1Labe2">Session 1 Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h6>Session Name: Session 1</h6>
+        <p>Speaker: Bill Gates</p>
+        <p>Date: 15.08.23</p>
+        <p>Time: 11.30 AM</p>
+        <p>Will speak about importance of problem solving</p>
+        <p>Founder of Microsoft.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer class="p-3 mb-2 bg-info text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Event Details</h3>
+          <p>Date: 15/09/2023</p>
+          <p>Place: The Buckinghum Palace</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Contact Us</h3>
+          <p>Phone: 1234567890</p>
+          <p>Email: sayem@bjit.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+   $(document).ready(() => {
+    $("#registration-form").submit(function(event) {
+    event.preventDefault();
+    $("#successModal").modal("show");
+    });
+  });
+  </script>
+</body>
+</html>
