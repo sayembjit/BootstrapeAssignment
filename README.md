@@ -5,7 +5,6 @@ Welcome to the JAVA Conference Registration Form project! This project showcases
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Usage](#usage)
-- [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -27,7 +26,7 @@ The JAVA Conference 2023 Registration Form is designed to provide attendees with
 
 To use this project, follow these steps:
 
-1. Clone the repository: `git clone`
+1. Clone the repository: `git clone git@github.com:sayembjit/BootstrapeAssignment.git`
 2. Open `index.html` in your web browser.
 
 ## Contributing
